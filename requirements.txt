@@ -4,5 +4,3 @@ torch
 transformers
 sentencepiece
 accelerate
-fastapi
-uvicorn
