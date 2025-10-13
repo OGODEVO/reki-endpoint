@@ -1,0 +1,8 @@
+flask
+mlx-lm
+torch
+transformers
+sentencepiece
+accelerate
+fastapi
+uvicorn
