@@ -14,7 +14,7 @@ def main():
     parser.add_argument("--top-p", type=float, default=1.0, help="Default nucleus sampling top-p.")
     parser.add_argument("--top-k", type=int, default=0, help="Default top-k sampling.")
     parser.add_argument("--min-p", type=float, default=0.0, help="Default min-p sampling.")
-    parser.add_argument("--max-tokens", type=int, default=2500, help="Default maximum number of tokens to generate.")
+    parser.add_argument("--max-tokens", type=int, default=1024, help="Default maximum number of tokens to generate.")
     args = parser.parse_args()
 
     model_path = os.path.abspath(args.model)
