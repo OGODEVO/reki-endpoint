@@ -9,6 +9,7 @@ def main():
     parser = argparse.ArgumentParser(description="Start the MLX server with an OpenAI-compatible API.")
     parser.add_argument("--model", type=str, default="reki-1", help="The path to the model directory.")
     parser.add_argument("--port", type=int, default=8787, help="The port to run the server on.")
+    parser.add_argument("--log-level", type=str, default="INFO", help="The log level for the server.")
     args = parser.parse_args()
 
     model_path = os.path.abspath(args.model)
@@ -17,6 +18,7 @@ def main():
         "venv/bin/mlx_lm.server",
         "--model", model_path,
         "--port", str(args.port),
+        "--log-level", args.log_level,
     ]
 
     print(f"Starting OpenAI-compatible server with command: {' '.join(command)}")
